@@ -13,6 +13,8 @@
 		A6CC95991C4F364800A960E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CC95971C4F364800A960E5 /* Main.storyboard */; };
 		A6CC959B1C4F364800A960E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6CC959A1C4F364800A960E5 /* Assets.xcassets */; };
 		A6CC959E1C4F364800A960E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CC959C1C4F364800A960E5 /* LaunchScreen.storyboard */; };
+		A6CC95AA1C4F386600A960E5 /* SamplePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC95A91C4F386600A960E5 /* SamplePresenter.m */; };
+		A6CC95AD1C4F387100A960E5 /* SampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC95AC1C4F387100A960E5 /* SampleModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		A6CC959A1C4F364800A960E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6CC959D1C4F364800A960E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6CC959F1C4F364800A960E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6CC95A81C4F386600A960E5 /* SamplePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplePresenter.h; sourceTree = "<group>"; };
+		A6CC95A91C4F386600A960E5 /* SamplePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplePresenter.m; sourceTree = "<group>"; };
+		A6CC95AB1C4F387100A960E5 /* SampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleModel.h; sourceTree = "<group>"; };
+		A6CC95AC1C4F387100A960E5 /* SampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +64,11 @@
 		A6CC958D1C4F364800A960E5 /* SimpleMVCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A6CC95A71C4F382300A960E5 /* Presenter */,
+				A6CC95A51C4F380600A960E5 /* ViewController */,
+				A6CC95A61C4F381800A960E5 /* Model */,
 				A6CC95911C4F364800A960E5 /* AppDelegate.h */,
 				A6CC95921C4F364800A960E5 /* AppDelegate.m */,
-				A6CC95941C4F364800A960E5 /* ViewController.h */,
-				A6CC95951C4F364800A960E5 /* ViewController.m */,
 				A6CC95971C4F364800A960E5 /* Main.storyboard */,
 				A6CC959A1C4F364800A960E5 /* Assets.xcassets */,
 				A6CC959C1C4F364800A960E5 /* LaunchScreen.storyboard */,
@@ -77,6 +84,33 @@
 				A6CC958F1C4F364800A960E5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6CC95A51C4F380600A960E5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A6CC95941C4F364800A960E5 /* ViewController.h */,
+				A6CC95951C4F364800A960E5 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		A6CC95A61C4F381800A960E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A6CC95AB1C4F387100A960E5 /* SampleModel.h */,
+				A6CC95AC1C4F387100A960E5 /* SampleModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A6CC95A71C4F382300A960E5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A6CC95A81C4F386600A960E5 /* SamplePresenter.h */,
+				A6CC95A91C4F386600A960E5 /* SamplePresenter.m */,
+			);
+			name = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +183,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6CC95AD1C4F387100A960E5 /* SampleModel.m in Sources */,
 				A6CC95961C4F364800A960E5 /* ViewController.m in Sources */,
 				A6CC95931C4F364800A960E5 /* AppDelegate.m in Sources */,
+				A6CC95AA1C4F386600A960E5 /* SamplePresenter.m in Sources */,
 				A6CC95901C4F364800A960E5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

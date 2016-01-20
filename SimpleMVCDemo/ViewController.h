@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SamplePresenter.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<SampleViewInterface>
 
+@property (strong, nonatomic) id<SamplePresenter> presenter;
 
 @end
 

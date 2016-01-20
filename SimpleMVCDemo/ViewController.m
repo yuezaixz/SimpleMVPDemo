@@ -9,19 +9,35 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *sampleLabel;
+@property (weak, nonatomic) IBOutlet UITextField *modifyText;
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    SampleModel *model = [[SampleModel alloc] init];
+    model.name = @"David";
+    
+    self.presenter = [[SamplePresenter alloc] init:model];
+    ((SamplePresenter *)self.presenter).viewDelegate = self;
+    [self.presenter displayModelName];
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+-(void)setModelNameLabel:(NSString *)name{
+    self.sampleLabel.text = name;
+}
+
+- (IBAction)modifyNameAction:(id)sender {
+    [self.presenter updateModelName:self.modifyText.text];
+}
+
 
 @end
